@@ -1,0 +1,24 @@
+{
+  "name": "github_lookup",
+  "description": "github lookup app",
+  "main": "index.js",
+  "authors": [
+    "jturello"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jturello/github_lookup_js",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "tmp"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.14.1"
+  }
+}
