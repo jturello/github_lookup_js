@@ -6,9 +6,12 @@ $(document).ready(function(){
     var user_id = $('#user_id').val();
     $('#user_id').val("");
 
-    var githubObj = new Github();
-    githubObj.getRepos(user_id);
+    if(user_id !== "") {
+      var githubObj = new Github();
+      var result = githubObj.getRepos(user_id);
+      
+      console.log("hi");
+    }
 
-    $('.output').text("user_id = " + user_id + "!");
   });
 });

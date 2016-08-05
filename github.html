@@ -8,10 +8,17 @@
   <body>
     <div class="container">
       <h1>Search Github!</h1>
-      <label for="user_id">Enter a User Id:</label>
-      <input id="user_id" type="text">
-      <button class="btn-success" id="getGithub">Get Github Info!</button>
+      <form>
+        <label for="user_id">Enter a User Id:</label>
+        <input id="user_id" type="text" required />
+        <button class="btn-success" id="getGithub">Get Github Info!</button>
+      </form>
+
+      <hr>
+
+      <div class="err"></div>
       <div class="output"></div>
+      <div class="results"></div>
     </div>
   </body>
 </html>
