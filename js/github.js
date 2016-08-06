@@ -20,7 +20,7 @@ Github.prototype.getRepos = function(user_id, displayFunction) {
     displayFunction(user_id, repos);
 
   }).fail(function(error){
-    $('.err').text(error.responseJSON.message);
+    $('#err').text(error.responseJSON.message);
   });
 };
 
