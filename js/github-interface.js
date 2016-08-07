@@ -23,6 +23,7 @@ $(document).ready(function(){
     $('#err').text("");
 
     if(user_id == "") {
+      console.log("id == empty");
       $('#err').text("Enter an ID and try again!");
       return false;
     }
