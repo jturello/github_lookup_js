@@ -8,9 +8,14 @@ var displayRepoInfo = function(user_id, repos) {
   for (i=0; i < repos.length; i++) {
     $('#repo_list').append("<li><a href='" + repos[i][0] + "'>" + repos[i][1] + " : " + repos[i][2] + "</a></li>");
   }
+  //console.log("end of display repos");
 };
 
+//console.log("no man's land");
+
 $(document).ready(function(){
+
+  //console.log("doc ready");
 
   $('#getGithub').click(function(){
 
@@ -23,7 +28,8 @@ $(document).ready(function(){
     $('#err').text("");
 
     if(user_id == "") {
-      console.log("id == empty");
+      //console.log("id == empty");
+
       $('#err').text("Enter an ID and try again!");
       return false;
     }
