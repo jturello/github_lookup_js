@@ -4,14 +4,17 @@ function Github(){
 }
 
 Github.prototype.getRepos = function(user_id, displayFunction) {
+  // console.log("getRepos - start");
+
+  api_call_not_pending = false;
   var repos = [];
   var repo = [];
 
   $.get('https://api.github.com/users/' + user_id + '/repos?access_token=' + apiKey).then(function(response){
 
-    //console.log('https://api.github.com/users/' + user_id + '/repos?access_token=' + apiKey);
-    // console.log(response);
-    //console.log(response.length);
+    // console.log('https://api.github.com/users/' + user_id + '/repos?access_token=' + apiKey);
+    // // console.log(response);
+    // // console.log(response.length);
 
     if (response.length < 1) {
       $('#err').text("Github returned an empty payload");
@@ -28,9 +31,12 @@ Github.prototype.getRepos = function(user_id, displayFunction) {
     }
     displayFunction(user_id, repos);
 
+  // console.log(".then() - end - before .fail()");
   }).fail(function(error){
     $('#err').text(error.responseJSON.message);
+  // console.log(".fail() - end");
   });
+// console.log("getRepos - end - below .fail()");
 };
 
 exports.githubModule = Github;
