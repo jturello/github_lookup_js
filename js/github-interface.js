@@ -22,7 +22,7 @@ $(document).ready(function(){
     $('#repo_list').empty();
     $('#err').text("");
 
-    if(user_id === "") {
+    if(user_id == "") {
       $('#err').text("Enter an ID and try again!");
       return false;
     }

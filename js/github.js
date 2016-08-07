@@ -9,6 +9,8 @@ Github.prototype.getRepos = function(user_id, displayFunction) {
 
   $.get('https://api.github.com/users/' + user_id + '/repos?access_token=' + apiKey).then(function(response){
 
+    console.log('https://api.github.com/users/' + user_id + '/repos?access_token=' + apiKey);
+
     for (i=0; i < response.length; i++){
       repo = [];
       repo.push(response[i].owner.html_url + "/" + response[i].name);
