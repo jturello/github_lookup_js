@@ -26,7 +26,7 @@ Epicodus javascript Week 1 Code Review - Using an API
 
 ## Known Bugs/Issues
 
-The input field is `required`. Because of the asynchronous nature of ajax calls, the validation message *please fill out this field* will display after you submit a request.
+No known issues.
 
 ## Technologies Used
 
