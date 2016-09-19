@@ -9,16 +9,13 @@ var displayRepoInfo = function(user_id, repos) {
   for (i=0; i < repos.length; i++) {
     $('#repo_list').append("<li><a href='" + repos[i][0] + "'>" + repos[i][1] + " : " + repos[i][2] + "</a></li>");
   }
-// console.log("end of display repos");
 };
 
-    // console.log("no man's land");
 
 $(document).ready(function(){
-    // console.log("doc ready");
 
-  $('#getGithub').click(function(){
-    // console.log("click - start");
+  $('#getGithub').submit(function(){
+    event.preventDefault();
 
     var user_id = $('#user_id').val();
 
@@ -29,15 +26,11 @@ $(document).ready(function(){
     $('#err').text("");
 
     if(user_id === "") {
-    // console.log("id == empty");
-
       $('#err').text("Enter an ID and try again!");
       return false;
     }
 
     var githubObj = new Github();
     githubObj.getRepos(user_id, displayRepoInfo);
-
-    // console.log("click - after api call");
   });
 });
